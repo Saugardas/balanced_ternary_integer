@@ -1,8 +1,6 @@
 # BalancedTernaryInteger
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/balanced_ternary_integer`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Conversion integers from/to balanced ternary and decimal numeral system. For -1 symbol 'T' is used.
 
 ## Installation
 
@@ -22,7 +20,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Conversion from decimal into ternary:
+```ruby
+BalancedTernaryInteger.from_int(11) # => '11T'
+```
+
+Conversion from ternary into decimal:
+```ruby
+BalancedTernaryInteger.to_int('TT') # => -4
+```
 
 ## Development
 

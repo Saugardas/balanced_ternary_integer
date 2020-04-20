@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Vasiliy Petrov"]
   spec.email         = ["saugardas@yandex.ru"]
 
-  spec.summary       = %q{Conversion from/to balanced ternary and decimal integer system.}
-  spec.description   = %q{Conversion from/to balanced ternary and decimal integer system.}
+  spec.summary       = %q{Conversion integers from/to balanced ternary and decimal numeral system.}
+  spec.description   = %q{Conversion integers from/to balanced ternary and decimal numeral system.}
   spec.homepage      = "https://github.com/Saugardas/balanced_ternary_integer"
   spec.license       = "MIT"
 
