@@ -38,7 +38,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/balanced_ternary_integer.
+Bug reports and pull requests are welcome on GitHub at https://github.com/Saugardas/balanced_ternary_integer.
 
 ## License
 
