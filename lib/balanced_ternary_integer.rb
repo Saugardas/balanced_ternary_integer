@@ -14,15 +14,5 @@ module BalancedTernaryInteger
       end until number.zero?
       digits
     end
-
-    def to_int(string)
-      raise ArgumentError, "String expected, got #{string.class}" unless string.instance_of?(String)
-      raise ArgumentError, 'String must contain only 0, 1, T symbols' unless string.match?(/\A[01T]*\z/)
-
-      string.chars.reverse.map.with_index.sum do |char, index|
-        num = char == 'T' ? -1 : char.to_i
-        num * 3**index
-      end
-    end
   end
 end

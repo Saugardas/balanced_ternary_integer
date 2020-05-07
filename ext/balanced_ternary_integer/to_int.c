@@ -13,7 +13,7 @@ short char_to_num(char digit) {
     }
 }
 
-VALUE rb_to_int_c(VALUE self, VALUE rb_string) {
+VALUE rb_balanced_ternary_integer_to_int(VALUE self, VALUE rb_string) {
     Check_Type(rb_string, T_STRING);  // raise TypeError (wrong argument type Integer (expected String))
 
     char *chars = RSTRING_PTR(rb_string);
@@ -31,5 +31,5 @@ VALUE rb_to_int_c(VALUE self, VALUE rb_string) {
 }
 
 void Init_to_int(VALUE mBalancedTernaryInteger) {
-    rb_define_singleton_method(mBalancedTernaryInteger, "to_int_c", rb_to_int_c, 1);
+    rb_define_singleton_method(mBalancedTernaryInteger, "to_int", rb_balanced_ternary_integer_to_int, 1);
 }

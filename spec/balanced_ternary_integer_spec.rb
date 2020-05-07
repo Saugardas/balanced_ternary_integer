@@ -7,10 +7,10 @@ RSpec.describe BalancedTernaryInteger do
 
   describe '.from_int' do
     context 'validation' do
-      it { expect { described_class.from_int(nil).to raise_error(ArgumentError) } }
-      it { expect { described_class.from_int('').to raise_error(ArgumentError) } }
-      it { expect { described_class.from_int(1.0).to raise_error(ArgumentError) } }
-      it { expect { described_class.from_int(10).not_to raise_error(ArgumentError) } }
+      it { expect { described_class.from_int(nil) }.to raise_error(ArgumentError) }
+      it { expect { described_class.from_int('') }.to raise_error(ArgumentError) }
+      it { expect { described_class.from_int(1.0) }.to raise_error(ArgumentError) }
+      it { expect { described_class.from_int(10) }.not_to raise_error }
     end
 
     context 'conversion' do
@@ -22,12 +22,12 @@ RSpec.describe BalancedTernaryInteger do
 
   describe '.to_int' do
     context 'validation' do
-      it { expect { described_class.to_int(nil).to raise_error(ArgumentError) } }
-      it { expect { described_class.to_int(0).to raise_error(ArgumentError) } }
-      it { expect { described_class.to_int('-1').to raise_error(ArgumentError) } }
-      it { expect { described_class.to_int('2').to raise_error(ArgumentError) } }
-      it { expect { described_class.from_int('').not_to raise_error(ArgumentError) } }
-      it { expect { described_class.from_int('T1').not_to raise_error(ArgumentError) } }
+      it { expect { described_class.to_int(nil) }.to raise_error(TypeError) }
+      it { expect { described_class.to_int(0) }.to raise_error(TypeError) }
+      it { expect { described_class.to_int('-1') }.to raise_error(ArgumentError) }
+      it { expect { described_class.to_int('2') }.to raise_error(ArgumentError) }
+      it { expect { described_class.to_int('') }.not_to raise_error }
+      it { expect { described_class.to_int('T1') }.not_to raise_error }
     end
 
     context 'conversion' do
