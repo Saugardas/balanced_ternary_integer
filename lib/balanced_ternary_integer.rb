@@ -1,4 +1,5 @@
 require 'balanced_ternary_integer/version'
+require 'balanced_ternary_integer/balanced_ternary_integer' # .co file
 
 module BalancedTernaryInteger
   class << self
