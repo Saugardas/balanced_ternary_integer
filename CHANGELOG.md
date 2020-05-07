@@ -3,3 +3,6 @@
 
 ### 0.2.0 - 2020-05-07
 - Translated BalancedTernaryInteger.to_int to C
+
+### 0.2.1 - 2020-05-07
+- Fix gemspec for native extension
